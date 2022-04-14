@@ -2,7 +2,9 @@ package com.example.listviewkt
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.example.listviewkt.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -46,5 +48,14 @@ class MainActivity : AppCompatActivity() {
         // 이용해서 뿌려주는 방식이다.
         val Adapter = UserAdapter(this, UserList)
         binding.listView.adapter = Adapter // 이렇게 해주면 UserAdapter라는 custom을 만든다.
+
+        binding.listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+
+            // position 위치로부터 item을 가져온다.
+            val selectItem = parent.getItemAtPosition(position) as User // 현재 클릭한 position을 가지고있는 변수가 만들어진다.
+            // Toast를 띄우는데 this 현재 엑티비티로 부터, selectItem.name은 User 모델의 name을 출력한다, 짧게 띄워준다.
+            Toast.makeText(this, selectItem.name, Toast.LENGTH_SHORT).show()
+
+        }
     }
 }
