@@ -7,12 +7,22 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="32dp"
+        android:text="안드로이드!"
+        android:textColor="#386C93"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--
+        xml파일
+         - 정적인 역할, 최초의 앱을 실행했을때 표시해주고 싶은 화면만 구성하는 것
+           실질적인 기능을 만들수는 없다.
+           ex) 버튼을 눌렀을때 일어나는 기능, imageView나 어떠한 action을 취하는 것
+    -->
 </androidx.constraintlayout.widget.ConstraintLayout>
