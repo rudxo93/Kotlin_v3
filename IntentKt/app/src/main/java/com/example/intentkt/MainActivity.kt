@@ -30,5 +30,6 @@ class MainActivity : AppCompatActivity() {
 
             finish() // 자기 자신 엑티비티를 파괴한다.
         }
+
     }
 }

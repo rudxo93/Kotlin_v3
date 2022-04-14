@@ -1,6 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ImageViewKt" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <!--
+        MaterialComponents 디자인을 상속
+        <style name="Theme.ImageViewKt"
+        parent="Theme.MaterialComponents.DayNight.DarkActionBar" >-->\
+
+    <!-- 변경해주게 되면 drawable이미지로 버튼이 바뀐다
+         but 해당 style을 적용하고 있는 Activity나 프로젝트 전체의 theme이 변경될 수 있으니 주의하자!
+     -->
+    <style name="Theme.ImageViewKt" parent='Theme.AppCompat.Light'>
+
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
