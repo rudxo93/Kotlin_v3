@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
             // position 위치로부터 item을 가져온다.
             val selectItem = parent.getItemAtPosition(position) as User // 현재 클릭한 position을 가지고있는 변수가 만들어진다.
-            // Toast를 띄우는데 this 현재 엑티비티로 부터, selectItem.name은 User 모델의 name을 출력한다, 짧게 띄워준다.
+            // Toast를 띄우는데 this 현재 엑티비티로 부터, selectItem.name은 User 모델의 name을 출력한다,` 짧게 띄워준다.
             Toast.makeText(this, selectItem.name, Toast.LENGTH_SHORT).show()
 
         }
