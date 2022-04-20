@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         // view pager adapter 설정
         binding.viewpager.apply {
             adapter = MyPagerAdapter(context as FragmentActivity)
+            setPageTransformer(ZoomOutPageTransformer()) // pageTransFormer 효과 적용
         }
 
         // tabLayout과 viewPager2를 연결할때 TabLayoutMediator사용
